@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(20, GPIO.IN) #pir for alcohol
 
-Relay_1_GPIO = 2 #alcohol
+Relay_1_GPIO = 23 #alcohol
 float = 3 #float switch
 
 GPIO.setup(Relay_1_GPIO, GPIO.OUT)
