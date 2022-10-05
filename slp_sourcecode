@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 from time import sleep
+import csv
+from datetime import datetime
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -15,7 +17,7 @@ GPIO.setup(Relay_1_GPIO, GPIO.OUT)
 #GPIO.setup(float, GPIO.OUT, initial=GPIO.HIGH)
 
 count = 0
-date_log = []
+#date_log = []
 measurement_ml = 450
 number_of_pumps = 0
 
@@ -28,12 +30,16 @@ while True:
             #GPIO.output(Relay_1_GPIO, GPIO.LOW)
         elif j==1:
             print("SYSTEM ACTIVATED")
-            date_log.append(time.ctime())
+            #date_log.append(time.ctime())
             GPIO.output(Relay_1_GPIO, GPIO.HIGH)
             time.sleep(1)
             GPIO.output(Relay_1_GPIO, GPIO.LOW)
             count +=1
             number_of_pumps += 15
+            current_date_time = datetime.now()
+            with open('systemlog.csv', 'w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(["ACTIVATED", current_date_time, "LIBRARY"])
         #time.sleep(3)
     else:
         print("EMPTY")
