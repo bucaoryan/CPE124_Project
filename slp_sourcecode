@@ -20,7 +20,7 @@ measurement_ml = 450
 number_of_pumps = 0
 
 while True:
-    if size <= measurement_ml:
+    if number_of_pumps <= measurement_ml:
         print("FULL")
         j = GPIO.input(20)
         if j==0:
