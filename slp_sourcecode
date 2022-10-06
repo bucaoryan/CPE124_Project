@@ -1,3 +1,5 @@
+#Group03 Source Code for CPE124_Project#
+
 import RPi.GPIO as GPIO
 import time
 from time import sleep
