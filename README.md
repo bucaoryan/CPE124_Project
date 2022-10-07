@@ -2,8 +2,11 @@
 
 ## Members
 Bucao, Ryan Dominic C.
+
 Magday, Russell Dwayne F.
+
 Rosario, Adryll Dustin C.
+
 Tapado, Edmund Hans
 
 ## Distribution of Tasks
