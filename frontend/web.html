@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WoT Project</title>
+</head>
+<body>
+    <div class="logo"><img src="spray.png"></div>
+    <nav>
+        <label class="title">CONTACTLESS ALCOHOL DISPENSER</label>
+    </nav>
+
+    <section class="firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <div class="first-class"><p class="blankspace">&zwnj;</p><h1>VOLUME CAPACITY  </h1>
+                <p class="blankspace">&zwnj;  </p>
+                <p id="volumeCapacity" class="volumeCapacity">Full</p></div>
+                <div class="first-class"><p class="blankspace">&zwnj;</p><h1>TOTAL COUNT </h1>
+                <p class="blankspace">&zwnj;  </p>
+                <p id="counter" class="counter">0</div></p>
+                <div class="first-class"><p class="blankspace">&zwnj;</p><h1>DATE AND TIME </h1>
+                <p class="blankspace">&zwnj;  </p>
+                <input type="text" id="dateAndTime" class="dateAndTime" disabled></div>
+ 
+ 
+            </div>
+        </div>
+    </section>
+ 
+    <section class="secondsection">
+        <div class="box-main">
+            <div class="secondhalf">
+                <h1 class="second-class"> SYSTEM ACTIVITY</h1>
+                <p class="text-small">
+                    <!-- system activity log = read from file (?) -->
+                </p>
+ 
+ 
+            </div>
+        </div>
+    </section>
+
+    <footer class="background">
+        <p class="text-footer">GROUP03 CPE124_E01</p>
+    </footer>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+        document.getElementById("dateAndTime").value = dateTime;
+    </script>
+</body>
+</html>
