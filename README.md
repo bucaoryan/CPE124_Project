@@ -8,8 +8,11 @@ Tapado, Edmund Hans
 
 ## Distribution of Tasks
 Bucao, Ryan Dominic C. - Developed the hardware; Coded the system Python source code, Web Application, NodeJS
+
 Magday, Russell Dwayne F. -  Developed the hardware
+
 Rosario, Adryll Dustin C. -  Developed the hardware
+
 Tapado, Edmund Hans - Developed the hardware and coded the Python source code
 
 ## Description:
