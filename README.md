@@ -7,7 +7,8 @@ Rosario, Adryll Dustin C.
 Tapado, Edmund Hans
 
 ## Distribution of Tasks
-Bucao, Ryan Dominic C. - Coded the system Python source code, Web Application, NodeJS 
+Bucao, Ryan Dominic C. - Coded the system Python source code, Web Application, NodeJS
+
 Magday, Russell Dwayne F. -  
 Rosario, Adryll Dustin C. -  
 Tapado, Edmund Hans - 
