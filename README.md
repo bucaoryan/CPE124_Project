@@ -14,7 +14,7 @@ Bucao, Ryan Dominic C. - Developed the hardware, coded the system Python source 
 
 Magday, Russell Dwayne F. -  Developed the hardware
 
-Rosario, Adryll Dustin C. -  Developed the hardware
+Rosario, Adryll Dustin C. -  Developed the hardware, Helped in the documentation of the Project, Created the Progress Report
 
 Tapado, Edmund Hans - Developed the hardware, coded the Python source code, NodeJS
 
