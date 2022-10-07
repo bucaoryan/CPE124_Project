@@ -22,7 +22,7 @@ Tapado, Edmund Hans - Developed the hardware, coded the Python source code, Node
 The system will use an IR sensor to detect if there is a motion for the system to react to. It will use a pump and relay module to release the alcohol contents inside the dispenser. The data acquired by the system will then be directed to its web application in real-time, monitoring the amount of alcohol left in the system and the number of people using it. This will also include the logs of the date and time the system activated. The components used will be the IR sensor, Raspberry PI, pump, and relay module.
 
 ## Project Schedule
-
+![Project_Schedule](https://raw.githubusercontent.com/rdfmagday21/CPE124_Project/main/Project%20Schedule.png)
 ## Screenshot
 ![ui_1](https://user-images.githubusercontent.com/69749867/194579670-1cf0b52f-fb8b-4a7c-a666-5672b5ff0137.jpg)
 
