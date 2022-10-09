@@ -9,9 +9,10 @@
 </head>
 <body>
     <div class="logo"><img src="spray.png"></div>
-    <nav>
-        <label class="title">CONTACTLESS ALCOHOL DISPENSER</label>
-    </nav>
+    <header>
+        <p class="title">CONTACTLESS ALCOHOL DISPENSER</p>
+        <div class="mainpage1"align="right"><a href="/system-act.html">System Activity</a></div>
+    </header>
 
     <section class="firstsection">
         <div class="box-main">
@@ -25,35 +26,26 @@
                 <div class="first-class"><p class="blankspace">&zwnj;</p><h1>DATE AND TIME </h1>
                 <p class="blankspace">&zwnj;  </p>
                 <input type="text" id="dateAndTime" class="dateAndTime" disabled></div>
- 
- 
             </div>
         </div>
     </section>
  
     <section class="secondsection">
-        <div class="second-box-main">
-                <h1 class="second-class">SYSTEM ACTIVITY</h1>
-                <p class="text-small">
-                    <!-- system activity log = read from file (?) -->
-                </p>
- 
- 
-            </div>
-        </div>
     </section>
 
     <footer class="background">
         <p class="text-footer">GROUP03 CPE124_E01</p>
     </footer>
 
-    <script src="socket.io/socket.io.js"></script>
+    <!-- <script src="socket.io/socket.io.js"></script> -->
+    </script>
     <script>
         var today = new Date();
         var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var dateTime = date+' '+time;
         document.getElementById("dateAndTime").value = dateTime;
+
     </script>
 </body>
 </html>
