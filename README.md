@@ -25,8 +25,8 @@ The system will use an IR sensor to detect if there is a motion for the system t
 ![Project_Schedule](https://raw.githubusercontent.com/rdfmagday21/CPE124_Project/main/Project%20Schedule.png)
 
 ## Screenshot
-![ui_1](https://user-images.githubusercontent.com/69749867/194760218-da28632a-626b-45f8-8385-38f15f730914.jpg)
-![ui2](https://user-images.githubusercontent.com/69749867/194760231-9fe6e877-1386-418b-ac98-854097d38665.jpg)
+![ui1](https://user-images.githubusercontent.com/69749867/194815741-c0526117-afa8-46df-9513-f18e24c0dd71.jpg)
+![ui2](https://user-images.githubusercontent.com/69749867/194815745-8c8e3716-cae4-42be-8876-2db54946512e.jpg)
 
 ## Gantt Chart
 ![image](https://user-images.githubusercontent.com/69749867/193819929-5e8bcc7d-e0a3-421f-94f9-bdac97487873.png)
