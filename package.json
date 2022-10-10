@@ -18,6 +18,7 @@
     "papaparse": "^5.3.2",
     "pi-pir-sensor": "^0.0.3",
     "pir": "^0.2.0",
+    "python-shell": "^3.0.1",
     "socket.io": "^4.5.2"
   }
 }
