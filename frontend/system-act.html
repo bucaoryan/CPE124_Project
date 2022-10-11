@@ -57,6 +57,15 @@
       }
      });
     });
-    
-   });
+   
+   //function to auto update table every 1 second
+   setInterval(function(){
+      $('#load_data').click(function(){
+         //alert('Data Loaded');
+      });
+   // set time out 2 seconds
+         setTimeout(function(){
+         $('#load_data').trigger('click');}, 2000);
+   },1000);
+   })
 </script>
