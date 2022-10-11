@@ -22,7 +22,7 @@
                 <p id="volumeCapacity" class="volumeCapacity">Full</p></div>
                 <div class="first-class"><p class="blankspace">&zwnj;</p><h1>TOTAL COUNT </h1>
                 <p class="blankspace">&zwnj;  </p>
-                <p id="counter" class="counter">0</div></p>
+                <p id="totalCount" class="totalCount">0</div></p>
                 <div class="first-class"><p class="blankspace">&zwnj;</p><h1>DATE AND TIME </h1>
                 <p class="blankspace">&zwnj;  </p>
                 <input type="text" id="dateAndTime" class="dateAndTime" disabled></div>
@@ -37,7 +37,7 @@
         <p class="text-footer">GROUP03 CPE124_E01</p>
     </footer>
 
-    <!-- <script src="socket.io/socket.io.js"></script> -->
+    <script src="socket.io/socket.io.js"></script>
     </script>
     <script>
         var today = new Date();
@@ -45,7 +45,33 @@
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var dateTime = date+' '+time;
         document.getElementById("dateAndTime").value = dateTime;
+        
+        //var socket = io.connect();
+        const socket = io('http://localhost:3000')
+        var totalCount = 0;
+        var totalPumps = 0;
+        var measurement_ml = 450
 
+        socket.on('message', function(data){
+            console.log(data);
+            counter()
+        })
+        function counter(){
+            const count = document.getElementById('totalCount') // total count of people
+            const status = document.getElementById('volumeCapacity') //system status
+            
+            count.innerHTML = 0;
+            count.innerHTML = totalCount;
+            //totalPumps = 450;
+            if (totalPumps < measurement_ml)
+            {
+                status.innerHTML = "FULL";
+                status.setAttribute("style","color:green");
+            } else {
+                status.innerHTML = "EMPTY";
+                status.setAttribute("style","color:red");
+            }
+       }
     </script>
 </body>
 </html>
