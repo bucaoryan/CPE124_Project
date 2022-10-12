@@ -1,77 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>WoT Project</title>
-</head>
-<body>
-    <div class="logo"><img src="spray.png"></div>
-    <header>
-        <p class="title">CONTACTLESS ALCOHOL DISPENSER</p>
-        <div class="mainpage1"align="right"><a href="/system-act.html">System Activity</a></div>
-    </header>
-
-    <section class="firstsection">
-        <div class="box-main">
-            <div class="firstHalf">
-                <div class="first-class"><p class="blankspace">&zwnj;</p><h1>VOLUME CAPACITY  </h1>
-                <p class="blankspace">&zwnj;  </p>
-                <p id="volumeCapacity" class="volumeCapacity">Full</p></div>
-                <div class="first-class"><p class="blankspace">&zwnj;</p><h1>TOTAL COUNT </h1>
-                <p class="blankspace">&zwnj;  </p>
-                <p id="totalCount" class="totalCount">0</div></p>
-                <div class="first-class"><p class="blankspace">&zwnj;</p><h1>DATE AND TIME </h1>
-                <p class="blankspace">&zwnj;  </p>
-                <input type="text" id="dateAndTime" class="dateAndTime" disabled></div>
+<html>
+   <head>
+      <title>WoT: SYSTEM ACTIVITY</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <link rel="stylesheet" href="style.css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div>
+         <div>
+            <header>
+               <h1 align="left" class="title">CONTACTLESS ALCOHOL DISPENSER</h1>
+               <div class="logo"><img src="spray.png"></div>
+            </header>
+            <br />
+            <p class="mainpage"align="right"><a href="/system-act.html">System Activity</a></p>
+            </a>
+            <div align="center">
+               <button type="button" style="color: transparent; background-color: transparent; border-color: transparent; cursor: default;" name="db_load_data" id="db_load_data" class="btn btn-info">Load Data</button>
             </div>
-        </div>
-    </section>
- 
-    <section class="secondsection">
-    </section>
-
-    <footer class="background">
-        <p class="text-footer">GROUP03 CPE124_E01</p>
-    </footer>
-
-    <script src="socket.io/socket.io.js"></script>
-    </script>
-    <script>
-        var today = new Date();
-        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-        document.getElementById("dateAndTime").value = dateTime;
-        
-        //var socket = io.connect();
-        const socket = io('http://localhost:3000')
-        var totalCount = 0;
-        var totalPumps = 0;
-        var measurement_ml = 450
-
-        socket.on('message', function(data){
-            console.log(data);
-            counter()
-        })
-        function counter(){
-            const count = document.getElementById('totalCount') // total count of people
-            const status = document.getElementById('volumeCapacity') //system status
-            
-            count.innerHTML = 0;
-            count.innerHTML = totalCount;
-            //totalPumps = 450;
-            if (totalPumps < measurement_ml)
-            {
-                status.innerHTML = "FULL";
-                status.setAttribute("style","color:green");
-            } else {
-                status.innerHTML = "EMPTY";
-                status.setAttribute("style","color:red");
-            }
-       }
-    </script>
-</body>
+            <br />
+            <div id="db_log_table" align="center" class="db_log_table">
+            </div>
+         </div>
+         <section class="secondsection">
+        </section>
+    
+        <footer>
+            <p class="text-footer">GROUP03 CPE124_E01</p>
+        </footer>
+      </div>
+   </body>
 </html>
+<script>
+   $(document).ready(function(){
+    $('#db_load_data').click(function(){
+     $.ajax({
+      url:"capacity_count_currentmeasure.csv",
+      dataType:"text",
+      success:function(data)
+      {
+       var db_log_data = data.split(/\r?\n|\r/);
+       var table_data = '<table class="table table-bordered table-striped">';
+       for(var count = 0; count<db_log_data.length; count++)
+       {
+        var cell_data = db_log_data[count].split(",");
+        table_data += '<tr>';
+        for(var cell_count=0; cell_count<cell_data.length; cell_count++)
+        {
+         if(count === 0)
+         {
+          table_data += '<th>'+cell_data[cell_count]+'</th>';
+         }
+         else
+         {
+          table_data += '<td>'+cell_data[cell_count]+'</td>';
+         }
+        }
+        table_data += '</tr>';
+       }
+       table_data += '</table>';
+       $('#db_log_table').html(table_data);
+      }
+     });
+    });
+   
+   //function to auto update table every 1 second
+   setInterval(function(){
+      $('#db_load_data').click(function(){
+         //alert('Data Loaded');
+      });
+   // set time out 1 seconds
+         setTimeout(function(){
+         $('#db_load_data').trigger('click');}, 100);
+   },1000);
+})
+</script>
