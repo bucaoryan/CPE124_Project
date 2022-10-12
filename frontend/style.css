@@ -11,27 +11,28 @@ body{
 }
 
 header{
-	background: #4e5c6d; 
-	height: 80px;
+	background: #afb5bc; 
+	height: 100px;
 	width: 100%;
 	border-style:solid;
 	border-width:2px;
 	border-color:black;
 }
+
 .title{
 	color:black;
-	font-size: 35px;
-	line-height:80px;
+	font-size: 50px;
+	line-height:100px;
 	padding: 0 100px;
 	font-weight:bold;
 }
 
 .logo img{
 	position:absolute;
-	margin-top:15px;
-	margin-left: 25px;
-	width: 65px;
-	height: 50px;
+	margin-top:-80px;
+	margin-left: 20px;
+	width: 85px;
+	height: 65px;
 }
 
 .box-main {
@@ -45,21 +46,23 @@ header{
 }
 
 .mainpage{
-	font-size: 15px;
+	font-size: 20px;
 	display: inline-block;
 	position: relative;
-	left: 1750px;
-	top: -70px;
+	left: 1600px;
+	top: -75px;
 	font-weight: bold;
+	text-decoration: underline;
 }
 
 .mainpage1{
-	font-size: 15px;
+	font-size: 20px;
 	display: inline-block;
 	position: relative;
-	left: 1750px;
-	top: -50px;
+	left: 1600px;
+	top: -75px;
 	font-weight: bold;
+	text-decoration: underline;
 }
 .firstsection {
 	background-color: white;
@@ -92,59 +95,55 @@ header{
 
 .secondsection {
 	background-color: white;
-	height: 330px;
+	height: 500px;
 }
 
 .btn{
 	font-size: 20px;
 	font-family: 'montserrat';
+	
 }
-.counter {
-	font-size: 25px;
-	font-family: 'arial';
-}
-
-.volumeCapacity{
-	font-size: 25px;
-	font-family: 'arial';
-}
-
-.dateAndTime{
-	font-size: 25px;
-	font-family: 'arial';
-	text-align: center;
-	border:0;
-}
-
-.blankspace{
-	font-size:8px;
+.web_btn{
+	top:10%;
+	left:50%;
+	width:100px;
+	height:100px;
+	position: absolute;
+	font-size: 20px;
+	font-family: 'montserrat';
 }
 
 .text-footer {
-	background: #4e5c6d;
+	background: #afb5bc;
 	text-align: center;
-	padding: 20px 0;
+	padding: 30px 0;
 	font-family: 'montserrat';
+	font-size: 23px;
 	display: flex;
 	justify-content: center;
 	color: black;
 	font-weight: bold;
+	border-style: solid;
+	border-width:2px;
 } 
 
+
 table {
-	overflow-y:auto; 
-	height:100px; 
+	height:170px; 
 	border-collapse: collapse;
 	border-radius: 5px;
 	box-shadow: 0 0 4px rgba(59, 12, 12, 0.25);
-	overflow: hidden;
-	font-family: "Quicksand", sans-serif;
+	overflow: auto;
+	font-family: "Montserrat";
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 25px;
+	border-style:solid;
+	border-width:px;
+	border-color:black;
 }
 
 th {
-	background: rgb(42, 108, 134);
+	background: rgb(48, 82, 95);
 	color: #ffffff;
 	text-align: left;
 }
