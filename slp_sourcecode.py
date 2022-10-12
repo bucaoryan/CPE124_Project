@@ -41,7 +41,7 @@ try:
                 true_measure = measurement_ml - number_of_pumps
                 measure_count_log =  [[STATUS0, count, true_measure]]
 
-                with open('/home/edward/cpe124/frontend/capacity_count_currentmeasure.csv', 'a+', newline='') as file0:
+                with open('/home/edward/cpe124/frontend/capacity_count_currentmeasure.csv', 'w+', newline='') as file0:
                     writer = csv.writer(file0)
                     writer.writerows(measure_count_log)
                 
@@ -56,6 +56,9 @@ try:
         else:
             print("EMPTY")
             measure_count_log =  [[STATUS1, count, true_measure]]
+            with open('/home/edward/cpe124/frontend/capacity_count_currentmeasure.csv', 'w+', newline='') as file0:
+                    writer = csv.writer(file0)
+                    writer.writerows(measure_count_log)
             time.sleep(60)
 
 except KeyboardInterrupt:
