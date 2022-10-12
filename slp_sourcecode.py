@@ -24,7 +24,7 @@ measure_count_log =[]
 
 try:
     while True:
-        if number_of_pumps <= measurement_ml:
+        if number_of_pumps < measurement_ml:
             print("FULL")
             j = GPIO.input(20)
             if j==0:
