@@ -10,7 +10,7 @@ Rosario, Adryll Dustin C.
 Tapado, Edmund Hans
 
 ## Distribution of Tasks
-Bucao, Ryan Dominic C. - Developed the hardware, coded the system Python source code, Web Application, NodeJS
+Bucao, Ryan Dominic C. - Developed the hardware, coded the system Python source code, Web Application, NodeJS, jQuery AJAX
 
 Magday, Russell Dwayne F. -  Developed the hardware
 
