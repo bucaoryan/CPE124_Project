@@ -28,8 +28,7 @@ try:
             print("FULL")
             j = GPIO.input(20)
             if j==0:
-                #print("no hand")
-                GPIO.output(Relay_1_GPIO, GPIO.LOW)
+                print("no hand")
             elif j==1:
                 print("SYSTEM ACTIVATED")
                 GPIO.output(Relay_1_GPIO, GPIO.LOW)
@@ -53,7 +52,7 @@ try:
                     writer.writerow(["ACTIVATED", current_date_time, "LIBRARY"])
                     file.flush()
                 file.close()
-            #time.sleep(2)
+            time.sleep(0.5)
         else:
             print('EMPTY')
             measure_count_log =  [[STATUS1, count, time.ctime()]]
