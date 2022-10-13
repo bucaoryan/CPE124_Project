@@ -48,8 +48,9 @@ http://localhost:3000/
 ![Project_Schedule](https://raw.githubusercontent.com/rdfmagday21/CPE124_Project/main/Project%20Schedule.png)
 
 ## Screenshot
-![ui1](https://user-images.githubusercontent.com/69749867/195298937-4c05ac38-4771-4046-9899-70d4b4159e35.jpg)
-![ui2](https://user-images.githubusercontent.com/69749867/195298942-7ce9372f-838e-4a60-9768-5dcf0812447f.jpg)
+![ui1](https://user-images.githubusercontent.com/69749867/195617803-69fbb6b2-836e-4d9d-b062-a964e9c737d2.jpg)
+![ui2](https://user-images.githubusercontent.com/69749867/195617809-b3350de2-5e8d-4fb1-81aa-488b95a2b589.jpg)
+
 
 ## Gantt Chart
 ![image](https://user-images.githubusercontent.com/69749867/193819929-5e8bcc7d-e0a3-421f-94f9-bdac97487873.png)
