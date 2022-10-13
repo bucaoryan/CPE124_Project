@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>WoT: SYSTEM ACTIVITY</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>WoT: System Activity</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+      <link rel="shortcut icon" href="CAD_ICON_WEBSITE.png" >
+      <link rel="stylesheet" href="style.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-      <link rel="stylesheet" href="style.css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+      <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      </style>
    </head>
-   <body>
-      <div>
-         <div>
-            <header>
-               <h1 align="center" class="title">SYSTEM ACTIVITY</h1>
-            </header>
-            <br />
-            <p class="mainpage" align="right" ><a href="/web.html"> Main Page</p>
-            </a>
-            <div align="center">
-               <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
-            </div>
-            <br /><br />
-            <div id="log_table" align="center">
-            </div>
+   <body id="home">
+      <header class="wrapper clearfix">
+         <div id="banner">
+            <div id="logo"><a href="web.html"><img src="CAD_LOGO.png"></a></div>
          </div>
-      </div>
+         <nav id="topnav" role="navigation">
+            <div class="menu-toggle">Menu</div>
+            <ul class="srt-menu" id="menu-main-navigation">
+            <li><a href="web.html">Home page</a></li>
+            <li class="current"><a href="system-act.html">System Activity </a></li>
+         </nav>
+      </header>
+      <section id="hero" class="clearfix">    
+      </section> 
+      <div id="main" class="wrapper">   
+         <section id="columnsdemo" style="margin-bottom:60px; width:100%" class="clearfix">
+		</br></br>
+            <h2 style="width:100%; clear:both" class="dashboard">SYSTEM ACTIVITY</h2>
+            <div>
+            </br>
+			   <div><table id="log_table"  style="border:1px solid black;margin-left:auto;margin-right:auto;" align="center" class="log_table"> </table>
+			</div>
+            <div align="center">
+				<button type="button" style="color: transparent; background-color: transparent; border-color: transparent; cursor: default;" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
+         </section> 
+      </div>    
+      <footer>
+		<div id="footerid" class="wrapper clearfix">GROUP03 CPE124_E01</div>
+      </footer> 
    </body>
 </html>
 <script>
@@ -69,3 +87,4 @@
    },1000);
 })
 </script>
+<script src="js/menu.js"></script>
