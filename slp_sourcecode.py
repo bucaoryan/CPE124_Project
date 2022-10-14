@@ -56,7 +56,7 @@ try:
         else:
             print('EMPTY')
             measure_count_log =  [[STATUS1, count, time.ctime()]]
-            with open('capacity_count_currentmeasure.csv', 'w+', newline='') as file0:
+            with open('/frontend/capacity_count_currentmeasure.csv', 'w+', newline='') as file0:
                 dw = csv.DictWriter(file0, delimiter=',', fieldnames=header0)
                 dw.writeheader()
                 writer = csv.writer(file0)
